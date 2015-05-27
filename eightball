@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+print(c.clear)
+import colors as c
+
+print(c.red + '''
+Enter your question below.
+WELCOME TO EIGHTBALL!!!
+
+Can I be a master programer?
+''' + c.reset)
+
+
+answers = [
+    'Yes.',
+    'No.',
+    'Maybe.',
+    'Shut up.',
+    'Take another guess.',
+    'Dont rely on it.',
+    'BAD QUESTION',
+    'The answer is right in front of you',
+    'It is immposable',
+    'possably',
+    'HECK NO',
+    'Find out for yourdelf',
+    'It will evemtually come up',
+    'This is tricky',
+    'You can rely on it',
+    'You will find out some day',
+    'Ask again',
+    'You already know this.',
+    'No one knows...',
+    'You will never find out. :(' 
+    ]
+

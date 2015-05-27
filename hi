@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+print('hello what is your name?')
+
+name = input('> ')
+
+print('Hello there ' + name )
+
