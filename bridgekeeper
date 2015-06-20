@@ -8,16 +8,41 @@ Who would cross the bridge of Death Must answer me these questions three
 Ere the other he see.
 ''' + c.reset)
 
-print(c.blue + '''What is your name?''' + c.reset)
-name = input('>')
+def prompt(question):
+    print(c.red + question + c.reset) 
+    answer = input("> " + c.base3).lower().strip()
+    print(c.reset)
+    return answer
 
+def live():
+    print(c.red + 'live' + c.reset)
 
-print(c.blue + '''What is your your quest?''' + c.reset)
-quest = input('>')
+def die():
+    print(c.red + 'die' + c.reset)
 
+name = prompt("What is your name? ")
+quest = prompt("What is your quest? ")
 
-if name in ['Lancelot','Galahad']:
+if name in ['lancelot','galahad']:
+    color = prompt("What is your favorite color? ")
+    if color == 'blue':
+        live()
+    else:
+        die()
 
-    print(c.blue + '''What is your favorite color?''' + c.reset)
-    color = input('>')
+elif name == 'robin':
+    capital = prompt('What is da capital of Assyria')
+    if capital in ['assur','ashur']:
+        live()
+    else:
+        die()
 
+elif name == 'arthur':
+    speed = prompt('What is the air speed velocity of an unladen swallow?')
+    if speed in ['24mph','24','24 mph']:
+        live()
+    elif 'european or african' in speed:
+        print("The bridgekeeper is thrown in the Gorge of Eternal Peril")
+        live()
+    else:
+        die()
