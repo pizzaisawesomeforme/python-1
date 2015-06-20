@@ -1,30 +1,30 @@
 import colors as c
 from utils import ask
 
-intro = c.clear + c.magenta + '''
+intro = c.clear + c.red + '''
 'Welcome to the QUIZ game!')
 ''' + c.reset
 
 def q1():
-    answer = ask('What are the color of the unicorns?')
-    if answer == 'pink':
-        print('And what a lovely color it is.')
+    answer = ask('What is the name of our country?')
+    if answer == 'USA':
+        print('We honer our country.')
         return True
     print('That is incorrect.')
     return False
 
 def q2():
-    answer = ask('What texture were the unicorns?')
-    if answer == 'cotton':
+    answer = ask('Who was our first presendent?')
+    if answer == 'George Washington':
         print('It is so soft.')
         return True
     print('That is incorrect.')
     return False
 
 def q3():
-    answer = ask('What were the unicorns doing?')
-    if answer == 'dancing':
-        print('Dancing is so much FUN!')
+    answer = ask('How many states are in our country?')
+    if answer == '50':
+        print('There is so many states!')
         return True
     print('That is incorrect.')
     return False
