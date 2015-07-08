@@ -1,49 +1,25 @@
 #!/usr/bin/env python3
 
+import colors as c
+from utils import ask
 
-
+print(c.clear + c.red + '''
+Welcome to the madlibs PROGRAM!
+''' + c.reset)
+ 
 text = '''
-I love to eat {pizza_topping} pizza. It is so good, when it is {temperature1}
-in my mouth. When the cheese melts it is a sighn of {adj1} and {temperature2}.
-It is so good with all of the ingredients and toppings. When the {sauce_type}
-touches my tounge it is {adj2}. The crust is the home of all the
-ingredients. It stores all of the {adj3} ingredients so they can mix
-to make the pizza. The toppings give the {adj4} tase.
-The toppings will never give a bad taste, for they are {adj5}.
-Last, but definatly not least the spices give the hot and spicy flavor.
-These spices could be {spice} or {spice}
-The spices are {adj6}. When all of these ingredients mix, they
-create an amazing food. That food is called the pizza!
+Ahh {amusment_park}, a fun place to go to. So many rides and games. We go there to {verb}. There is so much fun and exitment!
+When there is {adj1} weather, it is a {adj2} trip. But either way they can still be fun.
 '''
 
 words = {
-    
-    'pizza_topping': {},
-    'temp1': {},
-    'adj1': {},
-    'temp2': {},
-    'sause_type': {},
-    'adj2': {},
-    'adj3': {},
-    'adj4': {},
-    'adj5': {},
-    'spice1': {}, 
-    'spice2': {},
-    'adj6': {}
-}
-
-print(c.clear + c.red + '''
-Welcome to MADLIBS enter your answers below.
-''' + c.reset
+    "amusement_park" : {},
+    "adj1" : {},
+    "verb" : {},
+    "adj2" : {}
+}    
 
 answers = {}
+
 for key in words:
-
-    if key.startswith('adj'):
-        prompt = 'Adjective'
-    else:
-        prompt = key.replace('_',' ').title().rstrip('0123456789')
-
-    answers[key] = ask(prompt + ':',lower=False)
-
-print(c.clear + 'Personal Ad:\n" + text.format(**    
+    answer = ask("Enter " + key + ": ")
