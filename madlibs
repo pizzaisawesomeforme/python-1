@@ -3,23 +3,24 @@
 import colors as c
 from utils import ask
 
-print(c.clear + c.red + '''
-Welcome to the madlibs PROGRAM!
-''' + c.reset)
- 
 text = '''
-Ahh {amusment_park}, a fun place to go to. So many rides and games. We go there to {verb}. There is so much fun and exitment!
-When there is {adj1} weather, it is a {adj2} trip. But either way they can still be fun.
+Amusement Park
+
+Ahh {amusementpark}, a fun place to go to. So many rides and games.
+We go there to {verb}. There is so much fun and exitment!
+When there is {adj1} weather, it is a {adj2} trip. But either way they can still
+be fun. You eat lots of {food} at the park. Sometimes it makes you sick.   
 '''
 
 words = {
-    "amusement_park" : {},
-    "adj1" : {},
-    "verb" : {},
-    "adj2" : {}
+    "amusementpark" : None,
+    "adj1" : None,
+    "verb" : None,
+    "adj2" : None,
+    "food" : None
 }    
 
-answers = {}
+for keyword in words:
+    words[keyword] = ask(keyword.rstrip('0123456789') + ': ')
 
-for key in words:
-    answer = ask("Enter " + key + ": ")
+print(c.clear + text.format(**words))
