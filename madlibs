@@ -23,4 +23,6 @@ words = {
 for keyword in words:
     words[keyword] = ask(keyword.rstrip('0123456789') + ': ')
 
+print(words)
+
 print(c.clear + text.format(**words))
