@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+dice = []
+
+import colors as c
+
+dice.append('''
+ -------
+|       |
+|   o   |
+|       |
+ -------
+''')
+
+print(c.clear + c.random_color() + dice[0] + c.reset) 

@@ -21,7 +21,7 @@ words = {
 }    
 
 for keyword in words:
-    words[keyword] = ask(keyword.rstrip('0123456789') + ': ')
+    words[keyword] = c.red + ask(keyword.rstrip('0123456789') + ': ') + c.reset
 
 print(words)
 
