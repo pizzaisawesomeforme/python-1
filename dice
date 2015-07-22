@@ -3,6 +3,8 @@
 dice = []
 
 import colors as c
+import time
+import random
 
 dice.append('''
  -------
@@ -12,4 +14,48 @@ dice.append('''
  -------
 ''')
 
-print(c.clear + c.random_color() + dice[0] + c.reset) 
+dice.append('''
+ -------
+|o      |
+|       |
+|      o|
+ -------
+''')
+
+dice.append('''
+ -------
+|o      |
+|   o   |
+|      o|
+ -------
+''')
+
+dice.append('''
+ -------
+|o     o|
+|       |
+|o     o|
+ -------
+''')
+
+dice.append('''
+ -------
+|o     o|
+|   o   |
+|o     o|
+ -------
+''')
+
+dice.append('''
+ -------
+|o     o|
+|o     o|
+|o     o|
+ -------
+''')
+
+while True:
+    die = random.choice(dice)
+    print(c.clear + c.random_color() + die + c.reset)
+    input()
+
