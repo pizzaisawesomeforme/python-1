@@ -1,3 +1,27 @@
 #!/usr/bin/env python3
 
-import colors as c 
+import colors as c
+
+print(c.red + 'DO YOU LIKE WAFFLES?')
+waffles = input(c.blue + '> ')
+if waffles == 'yes':
+    print('YAY!')
+    print('DO YA LIKE PANCAKES?!')
+    pancakes = input(c.blue + '> ')
+    
+    if pancakes == 'yes':
+        print('you are learning the ways of BREAKFAST!')
+        print('DO YA LIKE FRENCH TOAST?!')
+        frenchtoast = input(c.blue + '> ')
+    
+        if frenchtoast == 'yes':
+            print('YAY')
+            print('You are now a... BREAKFAST MASTER!')
+else:
+    print('oh...')
+else:
+    print('')
+        
+else:
+    print('oh...')
+    
