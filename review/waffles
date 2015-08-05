@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print('DO YA LIKE WAFFLES')
+waffles = input(' >')
+if
