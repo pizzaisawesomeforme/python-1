@@ -4,4 +4,21 @@ import colors as c
 
 print('DO YA LIKE WAFFLES')
 waffles = input(' >')
-if
+if waffles == 'yes':
+    print('YAYY!!')
+else:
+    print('oh... NOW GET OUT!')
+
+print('DO YA LIKE PANCAKES?!')
+pancakes = input(' >')
+if pancakes == 'yes':
+    print('YOU ARE BECOMING A BREAKFAST MAASTER!!!')
+else:
+    print('oh.. NOW GET OUT!')
+
+print('DO YA LIKE FRENCH TOAST?!')
+frenchtoast = input(' >')
+if frenchtoast == 'yes':
+    print('YOU ARE NOW A BREAKFAST MASTER!')
+else:
+    print('oh... NOW GET OUT!')
